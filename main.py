@@ -8,7 +8,7 @@ while True:
     print ("2. kurang ")
     print ("3. bagi ")
     print ("4. kali ")
-    print ("0. keluar")
+    print ("5. keluar")
 
     pilihan = input("masukkan pilihan anda 1/2/3/4/0 ")
     if pilihan == "0":
