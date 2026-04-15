@@ -40,3 +40,6 @@ def start():
         if player1 <= 0:
             print("Kamu Kalah")
             break
+
+if __name__ == '__main__':
+    start()

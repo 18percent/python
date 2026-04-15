@@ -20,3 +20,6 @@ def start():
         
         else:
             print ("dibawah")
+
+if __name__ == '__main__':
+    start()

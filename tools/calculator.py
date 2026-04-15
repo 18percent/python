@@ -33,3 +33,6 @@ def start():
 
         print (hasil)
         break
+
+if __name__ == '__main__':
+    start()

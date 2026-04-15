@@ -13,3 +13,6 @@ def start():
     usd_reais = reais * usd_to_reais
 
     print ("usd left", usd_pesos + usd_soles + usd_reais)
+
+if __name__ == '__main__':
+    start()
