@@ -13,16 +13,17 @@ def welcome_message():
 
 
 def menu(): 
-    user_options = int(input("pilih menu: \n1. Games \n2. Tools \n3. Keluar Program \n\nsilahkan pilih: "))
-    if user_options == 1:
-        games_menu()
-    elif user_options == 2:
-        tools_menu()
-    elif user_options == 3:
-        exit_program()
-    else:
-        print("pilih 1 smpe 3 lolo")
-        menu()
+    while True:
+        user_options = int(input("pilih menu: \n1. Games \n2. Tools \n3. Keluar Program \n\nsilahkan pilih: "))
+        if user_options == 1:
+            games_menu()
+        elif user_options == 2:
+            tools_menu()
+        elif user_options == 3:
+            exit_program()
+        else:
+            print("pilih 1 smpe 3 lolo")
+            continue
 
 
 def games_menu(): 

@@ -9,8 +9,7 @@ def register():
             data_user, data_pass = data.split("|")
             if data_user == new_user:
                 print ("username sudah di pakai")
-                auth_start()
-
+                return
     with open ("users.txt", "a") as file:
         file.write(new_user + "|" + new_pass  + "\n")
 
