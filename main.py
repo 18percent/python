@@ -1,7 +1,8 @@
 from libs import welcome_message, exit_program, menu, back_to_menu
-from games import cuypy
+from services import auth 
 
 def main():
+    auth.auth_start()
     welcome_message()
     menu()
     back_to_menu()

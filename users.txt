@@ -1,2 +1,2 @@
-almus|123
-daris|111
+almus|1
+riadi|2
