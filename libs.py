@@ -14,40 +14,54 @@ def welcome_message():
 
 def menu(): 
     while True:
-        user_options = int(input("pilih menu: \n1. Games \n2. Tools \n3. Keluar Program \n\nsilahkan pilih: "))
-        if user_options == 1:
-            games_menu()
-        elif user_options == 2:
-            tools_menu()
-        elif user_options == 3:
-            exit_program()
-        else:
-            print("pilih 1 smpe 3 lolo")
-            continue
+        try:
+            user_options = int(input("pilih menu: \n1. Games \n2. Tools \n3. Keluar Program \n\nsilahkan pilih: "))
+            if user_options == 1:
+                games_menu()
+            elif user_options == 2:
+                tools_menu()
+            elif user_options == 3:
+                exit_program()
+            else:
+                print("pilih 1 smpe 3 lolo")
+                continue
+        except ValueError:
+            print ("masukken angka !")
 
 
 def games_menu(): 
-    user_options = int(input("pilih menu: \n1. Battle Game \n2. Cuypy \n3. Guess Number \n\nsilahkan pilih: "))
-    if user_options == 1:
-        battleGame.start()
-    elif user_options == 2:
-        cuypy.start()
-    elif user_options == 3:
-        guessNumber.start()
+    try:
+        user_options = int(input("pilih menu: \n1. Battle Game \n2. Cuypy \n3. Guess Number \n\nsilahkan pilih: "))
+        if user_options == 1:
+            battleGame.start()
+        elif user_options == 2:
+            cuypy.start()
+        elif user_options == 3:
+            guessNumber.start()
+    except ValueError:
+        print ("masukken angkan !")    
 
 
 def tools_menu(): 
-    user_options = int(input("pilih menu: \n1. Calculator \n2. Currency Converter \n\nsilahkan pilih: "))
-    if user_options == 1:
-        calculator.start()
-    elif user_options == 2:
-        currencyConverter.start()
+    try:
+        user_options = int(input("pilih menu: \n1. Calculator \n2. Currency Converter \n\nsilahkan pilih: "))
+        if user_options == 1:
+            calculator.start()
+        elif user_options == 2:
+            currencyConverter.start()
+    except ValueError:
+        print ("masukken angka !")
 
 
 def back_to_menu():
-    back = input("mau kembali ke menu [y/n] ")
-    if back == "y":
-        menu()
+    while True:
+        back = input("mau kembali ke menu [y/n] ").lower() 
+        if back == "y":
+            break
+        elif back == "n":
+            exit_program()
+        else:
+            print("pilih y or n aja")
          
 
 def exit_program():
@@ -57,5 +71,4 @@ def exit_program():
       
 
 if __name__ == '__main__':
-      welcome_message()
-      exit_program()
+    pass
